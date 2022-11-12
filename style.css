@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --primary-color: hsla(240, 6%, 21%, 1);
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(6rem, 6rem + 10vw, 12.6rem);
+}
+
+.page {
+  display: grid;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+.timer-wrapper {
+  align-self: center;
+  justify-self: center;
+}
+
+.timer-wrapper .timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons-timer {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 4.8rem;
+}
+
+.buttons-timer button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+button svg {
+  width: clamp(1rem, 2rem + 6vw, 4.8rem);
+}
+
+.buttonsSounds-wrapper {
+  align-self: flex-start;
+  justify-self: center;
+
+  display: grid;
+  grid-template:
+    "A B"
+    "C D";
+  gap: 3.2rem;
+}
+.buttonSound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+button.buttonSound {
+  padding: clamp(1rem, 1rem + 2vw, 2.4rem);
+  border-radius: 2.4rem;
+
+  border: none;
+}
+
+button.buttonSound input {
+  max-width: 9rem;
+}
+
+@media (min-width: 768px) {
+  .page {
+    grid-template: "A B";
+    gap: 17.2rem;
+    padding-inline: 3rem;
+  }
+
+  .timer-wrapper {
+    align-self: center;
+    justify-self: end;
+    padding: 2rem;
+  }
+
+  .buttonsSounds-wrapper {
+    align-self: center;
+    justify-self: start;
+  }
+}
+
+.timer-wrapper,
+.buttonsSounds-wrapper {
+  padding: 2rem;
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding-inline: 2rem;
+    max-width: 37.5rem;
+    margin: 0 auto;
+  }
+}
