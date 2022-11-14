@@ -22,7 +22,17 @@ body {
 .page {
   display: grid;
   height: 100vh;
-  max-width: 100vw;
+}
+
+.theme-button {
+  align-self: center;
+  justify-self: end;
+  padding: 0 6rem 0 0;
+}
+
+.theme-button button {
+  background: transparent;
+  border: none;
 }
 
 .timer-wrapper {
@@ -92,19 +102,27 @@ button.buttonSound input {
 
 @media (min-width: 768px) {
   .page {
-    grid-template: "A B";
-    gap: 17.2rem;
+    grid-template-areas:
+      "A A"
+      "B C";
+    column-gap: 17.2rem;
     padding-inline: 3rem;
   }
 
+  .theme-button {
+    grid-area: A;
+  }
+
   .timer-wrapper {
-    align-self: center;
+    grid-area: B;
+    align-self: flex-start;
     justify-self: end;
     padding: 2rem;
   }
 
   .buttonsSounds-wrapper {
-    align-self: center;
+    grid-area: C;
+    align-self: flex-start;
     justify-self: start;
   }
 }
@@ -119,5 +137,7 @@ button.buttonSound input {
     padding-inline: 2rem;
     max-width: 37.5rem;
     margin: 0 auto;
+
+    grid-template-rows: 7vh 40vh;
   }
 }
