@@ -7,8 +7,6 @@ import {
   btnStop,
   minutesDisplay,
   secondsDisplay,
-  btnAddTime,
-  btnRemoveTime,
 } from "./elements.js"
 
 function resetButtons() {

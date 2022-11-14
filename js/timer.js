@@ -5,7 +5,7 @@ export default function Timer({
 }) {
   let timerTimeOut
   let minutes = Number(minutesDisplay.textContent)
-  let newMinutes = 0
+  let newMinutes = minutes
   let newSeconds = 0
 
   function countdown() {
@@ -18,7 +18,7 @@ export default function Timer({
         resetTimer()
         return
       }
-      if (newSeconds <= 0) {
+      if (newSeconds <= 0 && newMinutes > 0) {
         newSeconds = 10
         newMinutes--
       }
