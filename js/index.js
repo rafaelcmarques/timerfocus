@@ -22,4 +22,4 @@ const timer = Timer({
   resetButtons,
 })
 
-const events = Events({ timer, resetButtons })
+Events({ timer, resetButtons })
