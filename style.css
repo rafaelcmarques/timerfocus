@@ -137,7 +137,10 @@ button.buttonSound input {
     padding-inline: 2rem;
     max-width: 37.5rem;
     margin: 0 auto;
-
+    grid-template-areas:
+      "A"
+      "B"
+      "C";
     grid-template-rows: 7vh 40vh;
   }
 }
