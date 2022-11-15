@@ -1,6 +1,8 @@
 export default function Sounds(allSoundButtons) {
   const fireplaceSound = {
-    audio: new Audio(".././audios/fireplace.wav"),
+    audio: new Audio(
+      "https://github.com/rafaelcmarques/timerfocus/raw/master/audios/fireplace.wav"
+    ),
     play() {
       fireplaceSound.audio.play()
       coffeeSound.audio.pause()
@@ -13,7 +15,9 @@ export default function Sounds(allSoundButtons) {
   }
 
   const coffeeSound = {
-    audio: new Audio(".././audios/coffee.wav"),
+    audio: new Audio(
+      "https://github.com/rafaelcmarques/timerfocus/raw/master/audios/coffee.wav"
+    ),
     play() {
       fireplaceSound.audio.pause()
       coffeeSound.audio.play()
@@ -26,7 +30,9 @@ export default function Sounds(allSoundButtons) {
   }
 
   const florestSound = {
-    audio: new Audio(".././audios/florest.wav"),
+    audio: new Audio(
+      "https://github.com/rafaelcmarques/timerfocus/raw/master/audios/florest.wav"
+    ),
     play() {
       fireplaceSound.audio.pause()
       coffeeSound.audio.pause()
@@ -39,7 +45,9 @@ export default function Sounds(allSoundButtons) {
   }
 
   const rainSound = {
-    audio: new Audio(".././audios/rain.wav"),
+    audio: new Audio(
+      "https://github.com/rafaelcmarques/timerfocus/raw/master/audios/rain.wav"
+    ),
     play() {
       fireplaceSound.audio.pause()
       coffeeSound.audio.pause()
