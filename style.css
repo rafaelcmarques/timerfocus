@@ -7,6 +7,9 @@
 :root {
   font-size: 62.5%;
   --primary-color: hsla(240, 6%, 21%, 1);
+  --dark-color-bg: #141416;
+  --dark-color-button-bg: #29292e;
+  --light-color: #ffffff;
 }
 
 .hide {
@@ -19,9 +22,21 @@ body {
   color: var(--primary-color);
 }
 
+body .page.darkMode {
+  color: var(--light-color);
+}
+
 .page {
   display: grid;
   height: 100vh;
+}
+
+.page.darkMode {
+  background: var(--dark-color-bg);
+}
+
+body .page.darkMode {
+  color: var(--light-color);
 }
 
 .theme-button {
@@ -65,6 +80,10 @@ button svg {
   width: clamp(1rem, 2rem + 6vw, 4.8rem);
 }
 
+.page.darkMode button svg path {
+  fill: var(--light-color);
+}
+
 .buttonsSounds-wrapper {
   align-self: flex-start;
   justify-self: center;
@@ -83,12 +102,21 @@ button svg {
   gap: 3.2rem;
 }
 
-.buttonSound.soundOn {
+.page.darkMode .buttonSound {
+  background-color: var(--dark-color-button-bg);
+}
+
+.buttonSound.soundOn,
+.page.darkMode .buttonSound.soundOn {
   background-color: #02799d;
 }
 
 .buttonSound.soundOn svg path {
   fill: #ffffff;
+}
+
+.page.darkMode .buttonSound.soudOn svg path {
+  fill: var(--light-color);
 }
 
 .buttonSound.soundOn input {

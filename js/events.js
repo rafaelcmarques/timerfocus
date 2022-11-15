@@ -9,6 +9,8 @@ import {
   btnCoffee,
   btnFireplace,
   btnRain,
+  themeButton,
+  page,
 } from "./elements.js"
 
 //Timer controler
@@ -70,5 +72,13 @@ export default function Events({ timer, resetButtons, sound }) {
   btnFireplace.addEventListener("click", () => {
     let newSound = sound.fireplaceSound
     sound.isSoundON(btnFireplace, newSound)
+  })
+
+  themeButton.addEventListener("click", () => {
+    if (page.classList.contains("darkMode")) {
+      page.classList.remove("darkMode")
+    } else {
+      page.classList.add("darkMode")
+    }
   })
 }
