@@ -10,7 +10,7 @@ import {
   btnFireplace,
   btnRain,
   themeButton,
-  page,
+  main,
 } from "./elements.js"
 
 //Timer controler
@@ -75,10 +75,10 @@ export default function Events({ timer, resetButtons, sound }) {
   })
 
   themeButton.addEventListener("click", () => {
-    if (page.classList.contains("darkMode")) {
-      page.classList.remove("darkMode")
+    if (main.classList.contains("darkMode")) {
+      main.classList.remove("darkMode")
     } else {
-      page.classList.add("darkMode")
+      main.classList.add("darkMode")
     }
   })
 }

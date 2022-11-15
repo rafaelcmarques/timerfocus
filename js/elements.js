@@ -12,7 +12,8 @@ const btnCoffee = document.querySelector("#btnCoffee")
 const btnFireplace = document.querySelector("#btnFireplace")
 const allSoundButtons = document.querySelectorAll(".buttonSound")
 const themeButton = document.querySelector(".theme-button")
-const page = document.querySelector(".page")
+const main = document.querySelector("main")
+
 console.log(allSoundButtons)
 export {
   btnPlay,
@@ -29,5 +30,5 @@ export {
   btnFireplace,
   allSoundButtons,
   themeButton,
-  page,
+  main,
 }

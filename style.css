@@ -22,21 +22,17 @@ body {
   color: var(--primary-color);
 }
 
-body .page.darkMode {
+body main.darkMode {
   color: var(--light-color);
+}
+
+main.darkMode {
+  background: var(--dark-color-bg);
 }
 
 .page {
   display: grid;
   height: 100vh;
-}
-
-.page.darkMode {
-  background: var(--dark-color-bg);
-}
-
-body .page.darkMode {
-  color: var(--light-color);
 }
 
 .theme-button {
@@ -79,7 +75,7 @@ button svg {
   width: clamp(1rem, 2rem + 6vw, 4.8rem);
 }
 
-.page.darkMode button svg path {
+main.darkMode button svg path {
   fill: var(--light-color);
 }
 
@@ -101,12 +97,12 @@ button svg {
   gap: 3.2rem;
 }
 
-.page.darkMode .buttonSound {
+main.darkMode .buttonSound {
   background-color: var(--dark-color-button-bg);
 }
 
 .buttonSound.soundOn,
-.page.darkMode .buttonSound.soundOn {
+main.darkMode .buttonSound.soundOn {
   background-color: #02799d;
 }
 
@@ -114,7 +110,7 @@ button svg {
   fill: #ffffff;
 }
 
-.page.darkMode .buttonSound.soudOn svg path {
+main.darkMode .buttonSound.soudOn svg path {
   fill: var(--light-color);
 }
 
