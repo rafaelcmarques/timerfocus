@@ -9,12 +9,16 @@ import {
   btnCoffee,
   btnFireplace,
   btnRain,
-  themeButton,
-  main,
+  btnVolumeCoffee,
+  btnVolumeFireplace,
+  btnVolumeFlorest,
+  btnVolumeRain,
+  btnLightMode,
+  btnDarkMode,
 } from "./elements.js"
 
 //Timer controler
-export default function Events({ timer, resetButtons, sound }) {
+export default function Events({ timer, resetButtons, sound, theme }) {
   btnPlay.addEventListener("click", () => {
     btnPlay.classList.add("hide")
     btnPause.classList.remove("hide")
@@ -74,11 +78,40 @@ export default function Events({ timer, resetButtons, sound }) {
     sound.isSoundON(btnFireplace, newSound)
   })
 
-  themeButton.addEventListener("click", () => {
-    if (main.classList.contains("darkMode")) {
-      main.classList.remove("darkMode")
-    } else {
-      main.classList.add("darkMode")
-    }
+  // Volume Controller
+
+  btnVolumeRain.addEventListener("change", () => {
+    let rainSound = sound.rainSound
+    let volume = btnVolumeRain.value
+
+    sound.updateVolume(rainSound, volume)
+  })
+
+  btnVolumeFlorest.addEventListener("change", () => {
+    let florestSound = sound.florestSound
+    let volume = btnVolumeFlorest.value
+    sound.updateVolume(florestSound, volume)
+  })
+
+  btnVolumeFireplace.addEventListener("change", () => {
+    let fireplaceSound = sound.fireplaceSound
+    let volume = btnVolumeFireplace.value
+    sound.updateVolume(fireplaceSound, volume)
+  })
+
+  btnVolumeCoffee.addEventListener("change", () => {
+    let coffeeSound = sound.coffeeSound
+    let volume = btnVolumeCoffee.value
+    sound.updateVolume(coffeeSound, volume)
+  })
+
+  // Theme buttons
+
+  btnLightMode.addEventListener("click", () => {
+    theme.changeTheme()
+  })
+
+  btnDarkMode.addEventListener("click", () => {
+    theme.changeTheme()
   })
 }

@@ -1,4 +1,4 @@
-export default function Sounds(allSoundButtons) {
+export default function Sounds({ allSoundButtons }) {
   const fireplaceSound = {
     audio: new Audio(
       "https://github.com/rafaelcmarques/timerfocus/raw/master/audios/fireplace.wav"
@@ -59,6 +59,10 @@ export default function Sounds(allSoundButtons) {
     },
   }
 
+  function updateVolume(sound, value) {
+    sound.audio.volume = value / 100
+  }
+
   function resetSoundButtons() {
     for (const button of allSoundButtons) {
       button.classList.remove("soundOn")
@@ -96,5 +100,6 @@ export default function Sounds(allSoundButtons) {
     florestSound,
     isSoundON,
     resetSoundButtons,
+    updateVolume,
   }
 }

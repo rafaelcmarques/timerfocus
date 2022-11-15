@@ -9,7 +9,11 @@ import {
   minutesDisplay,
   secondsDisplay,
   allSoundButtons,
+  main,
+  btnLightMode,
+  btnDarkMode,
 } from "./elements.js"
+import Theme from "./theme.js"
 
 function resetButtons() {
   btnStop.classList.add("hide")
@@ -18,7 +22,9 @@ function resetButtons() {
   btnSet.classList.remove("hide")
 }
 
-const sound = Sounds(allSoundButtons)
+const sound = Sounds({
+  allSoundButtons,
+})
 
 const timer = Timer({
   minutesDisplay,
@@ -27,4 +33,6 @@ const timer = Timer({
   resetSounds: sound.resetSoundButtons,
 })
 
-Events({ timer, resetButtons, sound })
+const theme = Theme({ main, btnLightMode, btnDarkMode })
+
+Events({ timer, resetButtons, sound, theme })
