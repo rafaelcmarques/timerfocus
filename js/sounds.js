@@ -1,6 +1,6 @@
 export default function Sounds(allSoundButtons) {
   const fireplaceSound = {
-    audio: new Audio("../audios/fireplace.wav"),
+    audio: new Audio(".././audios/fireplace.wav"),
     play() {
       fireplaceSound.audio.play()
       coffeeSound.audio.pause()
@@ -13,7 +13,7 @@ export default function Sounds(allSoundButtons) {
   }
 
   const coffeeSound = {
-    audio: new Audio("../audios/coffee.wav"),
+    audio: new Audio(".././audios/coffee.wav"),
     play() {
       fireplaceSound.audio.pause()
       coffeeSound.audio.play()
@@ -26,7 +26,7 @@ export default function Sounds(allSoundButtons) {
   }
 
   const florestSound = {
-    audio: new Audio("../audios/florest.wav"),
+    audio: new Audio(".././audios/florest.wav"),
     play() {
       fireplaceSound.audio.pause()
       coffeeSound.audio.pause()
@@ -39,7 +39,7 @@ export default function Sounds(allSoundButtons) {
   }
 
   const rainSound = {
-    audio: new Audio("../audios/rain.wav"),
+    audio: new Audio(".././audios/rain.wav"),
     play() {
       fireplaceSound.audio.pause()
       coffeeSound.audio.pause()
@@ -53,9 +53,9 @@ export default function Sounds(allSoundButtons) {
 
   function resetSoundButtons() {
     for (const button of allSoundButtons) {
-      pauseAllSounds()
       button.classList.remove("soundOn")
     }
+    pauseAllSounds()
   }
 
   function pauseAllSounds() {
@@ -71,8 +71,8 @@ export default function Sounds(allSoundButtons) {
       newSound.pause()
     } else {
       resetSoundButtons()
-      newSound.play()
       button.classList.add("soundOn")
+      newSound.play()
     }
   }
 
