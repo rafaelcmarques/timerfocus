@@ -2,6 +2,7 @@ export default function Timer({
   minutesDisplay,
   secondsDisplay,
   resetButtons,
+  resetSounds,
 }) {
   let timerTimeOut
   let minutes = Number(minutesDisplay.textContent)
@@ -16,6 +17,7 @@ export default function Timer({
       if (newMinutes <= 0 && newSeconds <= 0) {
         updateDisplay()
         resetTimer()
+        resetSounds()
         return
       }
       if (newSeconds <= 0 && newMinutes > 0) {

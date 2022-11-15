@@ -6,7 +6,12 @@ const minutesDisplay = document.querySelector(".minutes")
 const secondsDisplay = document.querySelector(".seconds")
 const btnAddTime = document.querySelector(".btnAddTime")
 const btnRemoveTime = document.querySelector(".btnRemoveTime")
-
+const btnFlorest = document.querySelector("#btnFlorest")
+const btnRain = document.querySelector("#btnRain")
+const btnCoffee = document.querySelector("#btnCoffee")
+const btnFireplace = document.querySelector("#btnFireplace")
+const allSoundButtons = document.querySelectorAll(".buttonSound")
+console.log(allSoundButtons)
 export {
   btnPlay,
   btnPause,
@@ -16,4 +21,9 @@ export {
   secondsDisplay,
   btnAddTime,
   btnRemoveTime,
+  btnFlorest,
+  btnRain,
+  btnCoffee,
+  btnFireplace,
+  allSoundButtons,
 }

@@ -5,9 +5,14 @@ import {
   btnStop,
   btnAddTime,
   btnRemoveTime,
+  btnFlorest,
+  btnCoffee,
+  btnFireplace,
+  btnRain,
 } from "./elements.js"
 
-export default function Events({ timer, resetButtons }) {
+//Timer controler
+export default function Events({ timer, resetButtons, sound }) {
   btnPlay.addEventListener("click", () => {
     btnPlay.classList.add("hide")
     btnPause.classList.remove("hide")
@@ -43,5 +48,27 @@ export default function Events({ timer, resetButtons }) {
 
   btnRemoveTime.addEventListener("click", () => {
     timer.removeTime()
+  })
+
+  // Buttons Sounds Controlers
+
+  btnFlorest.addEventListener("click", () => {
+    let newSound = sound.florestSound
+    sound.isSoundON(btnFlorest, newSound)
+  })
+
+  btnRain.addEventListener("click", () => {
+    let newSound = sound.rainSound
+    sound.isSoundON(btnRain, newSound)
+  })
+
+  btnCoffee.addEventListener("click", () => {
+    let newSound = sound.coffeeSound
+    sound.isSoundON(btnCoffee, newSound)
+  })
+
+  btnFireplace.addEventListener("click", () => {
+    let newSound = sound.fireplaceSound
+    sound.isSoundON(btnFireplace, newSound)
   })
 }

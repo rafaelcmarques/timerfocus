@@ -27,7 +27,7 @@ body {
 .theme-button {
   align-self: center;
   justify-self: end;
-  padding: 0 6rem 0 0;
+  padding: 0 2rem 0 0;
 }
 
 .theme-button button {
@@ -83,6 +83,42 @@ button svg {
   gap: 3.2rem;
 }
 
+.buttonSound.soundOn {
+  background-color: #02799d;
+}
+
+.buttonSound.soundOn svg path {
+  fill: #ffffff;
+}
+
+.buttonSound.soundOn input {
+  -webkit-appearance: none;
+  background: white;
+  outline: none;
+  height: 0.8rem;
+  border-radius: 0.9rem;
+}
+
+.buttonSound.soundOn input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+
+  background: white;
+  cursor: pointer;
+}
+
+.buttonSound.soundOn input::-moz-range-thumb {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+
+  background: white;
+  cursor: pointer;
+}
+
 button.buttonSound {
   padding: clamp(1rem, 1rem + 2vw, 2.4rem);
   border-radius: 2.4rem;
@@ -111,6 +147,7 @@ button.buttonSound input {
 
   .theme-button {
     grid-area: A;
+    padding: 0 6rem 0 0;
   }
 
   .timer-wrapper {

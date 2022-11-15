@@ -1,5 +1,6 @@
 import Timer from "./timer.js"
 import Events from "./events.js"
+import Sounds from "./sounds.js"
 import {
   btnPlay,
   btnPause,
@@ -7,6 +8,7 @@ import {
   btnStop,
   minutesDisplay,
   secondsDisplay,
+  allSoundButtons,
 } from "./elements.js"
 
 function resetButtons() {
@@ -16,10 +18,13 @@ function resetButtons() {
   btnSet.classList.remove("hide")
 }
 
+const sound = Sounds(allSoundButtons)
+
 const timer = Timer({
   minutesDisplay,
   secondsDisplay,
   resetButtons,
+  resetSounds: sound.resetSoundButtons,
 })
 
-Events({ timer, resetButtons })
+Events({ timer, resetButtons, sound })
