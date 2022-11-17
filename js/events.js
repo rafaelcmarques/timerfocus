@@ -35,12 +35,18 @@ export default function Events({ timer, resetButtons, sound, theme }) {
 
   btnSet.addEventListener("click", () => {
     let newMinutes
-    newMinutes = prompt("Digite os minutos:")
-    timer.updateDisplay(newMinutes)
-    timer.updateMinutes(newMinutes)
+    newMinutes = Number(prompt("Digite os minutos:"))
+    console.log(newMinutes, Number.isNaN(newMinutes), typeof newMinutes)
 
-    btnSet.classList.add("hide")
-    btnStop.classList.remove("hide")
+    if (Number.isNaN(newMinutes)) {
+      alert("Apenas números são permitidos. Tente novamente")
+    } else {
+      timer.updateDisplay(newMinutes)
+      timer.updateMinutes(newMinutes)
+
+      btnSet.classList.add("hide")
+      btnStop.classList.remove("hide")
+    }
   })
 
   btnStop.addEventListener("click", () => {
